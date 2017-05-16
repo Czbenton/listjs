@@ -1,0 +1,26 @@
+/*font-family: 'Comfortaa', cursive;
+font-family: 'Bubbler One', sans-serif;*/
+
+html{
+  background-color: #33A1DE;
+
+
+}
+
+h1 {
+    font-family: 'Comfortaa', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #404040;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list{
+  list-style-type: none;
+}
