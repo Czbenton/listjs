@@ -1,10 +1,6 @@
-/*font-family: 'Comfortaa', cursive;
-font-family: 'Bubbler One', sans-serif;*/
 
 html{
   background-color: #33A1DE;
-
-
 }
 
 h1 {
@@ -13,6 +9,15 @@ h1 {
     justify-content: center;
     align-items: center;
     color: #404040;
+    font-size: 6rem;
+}
+
+#input{
+  border-radius: 25px;
+  width: 20rem;
+  height: 2.5rem;
+  font-size: 24px;
+  text-align: center;
 }
 
 .center{
@@ -21,6 +26,23 @@ h1 {
   align-items: center;
 }
 
+
+#listContainer{
+  display: none;
+}
 .list{
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 20%;
+}
+
+li{
+  /*font-family: 'Bubbler One', sans-serif;*/
+  font-family: 'Comfortaa', cursive;
+  display: flex;
+  justify-content: flex-start;
+  margin: 2px;
+  font-size: 1.5rem;
 }
