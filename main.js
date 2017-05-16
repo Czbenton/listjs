@@ -1,5 +1,5 @@
 (function() {
-  document.querySelector('h1').textContent = "One List";
+    document.querySelector('h1').textContent = "One List";
 })();
 
 
@@ -8,12 +8,25 @@ function submitText(event) {
         var text = document.createTextNode(event.target.value);
         var list = document.getElementById('list');
         var newLi = document.createElement("li");
+        var newId = Math.random();
+        newLi.id = newId;
         list.appendChild(newLi);
-        // newLi.className = "center";
+
+        newLi.onclick = function() {
+          let x = document.getElementById(newId);
+          if (!x.style.textDecoration) {
+            x.style.textDecoration = "line-through";
+            x.style.textDecorationColor = "#000000:"
+          }else {
+            x.style.textDecoration = "none";
+            x.style.textDecorationColor = "";
+          }
+        }
+
         newLi.appendChild(text);
         document.getElementById('input').value = "";
-        (function(){
-          document.getElementById('listContainer').style.display = "flex";
+        (function() { //show hidden container to give input smooth movemnet
+            document.getElementById('listContainer').style.display = "flex";
         })();
     }
 }

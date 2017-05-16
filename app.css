@@ -45,4 +45,6 @@ li{
   justify-content: flex-start;
   margin: 2px;
   font-size: 1.5rem;
+  /*text-decoration: line-through;*/
+  /*text-decoration-color: #000000;*/
 }
