@@ -10,23 +10,32 @@ function submitText(event) {
         var newLi = document.createElement("li");
         var newId = Math.random();
         newLi.id = newId;
-        $(list.appendChild(newLi)).hide().fadeIn();
 
-
-        newLi.onclick = function() {
-            let x = document.getElementById(newId);
-            if (!x.style.textDecoration) {
-                x.style.textDecoration = "line-through";
-                x.style.textDecorationColor = "#000000:"
-            } else {
-                x.style.textDecoration = "none";
-                x.style.textDecorationColor = "";
-            }
-        }
-
-        newLi.appendChild(text);
+        addListItem(text,list,newLi,newId);
         document.getElementById('input').value = "";
         document.getElementById('listContainer').style.display = "flex";
-
     }
 }
+
+function addListItem(text,list,newLi,newId) {
+    newLi.appendChild(text);
+    $(list.appendChild(newLi)).hide().fadeIn();
+    newLi.onclick = function() {
+        let x = document.getElementById(newId);
+        if (!x.style.textDecoration) {
+            x.style.textDecoration = "line-through";
+            x.style.textDecorationColor = "#000000:"
+        } else {
+            x.style.textDecoration = "none";
+            x.style.textDecorationColor = "";
+        }
+    }
+}
+
+function deleteListItem() {
+
+}
+
+// function bubble(event){
+//   console.log(event);
+// }
