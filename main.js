@@ -10,23 +10,23 @@ function submitText(event) {
         var newLi = document.createElement("li");
         var newId = Math.random();
         newLi.id = newId;
-        list.appendChild(newLi);
+        $(list.appendChild(newLi)).hide().fadeIn();
+
 
         newLi.onclick = function() {
-          let x = document.getElementById(newId);
-          if (!x.style.textDecoration) {
-            x.style.textDecoration = "line-through";
-            x.style.textDecorationColor = "#000000:"
-          }else {
-            x.style.textDecoration = "none";
-            x.style.textDecorationColor = "";
-          }
+            let x = document.getElementById(newId);
+            if (!x.style.textDecoration) {
+                x.style.textDecoration = "line-through";
+                x.style.textDecorationColor = "#000000:"
+            } else {
+                x.style.textDecoration = "none";
+                x.style.textDecorationColor = "";
+            }
         }
 
         newLi.appendChild(text);
         document.getElementById('input').value = "";
-        (function() { //show hidden container to give input smooth movemnet
-            document.getElementById('listContainer').style.display = "flex";
-        })();
+        document.getElementById('listContainer').style.display = "flex";
+
     }
 }
