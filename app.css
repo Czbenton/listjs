@@ -1,6 +1,5 @@
-
-html{
-  background-color: #33A1DE;
+html {
+    background-color: #33A1DE;
 }
 
 h1 {
@@ -12,39 +11,43 @@ h1 {
     font-size: 6rem;
 }
 
-#input{
-  border-radius: 25px;
-  width: 20rem;
-  height: 2.5rem;
-  font-size: 24px;
-  text-align: center;
+#input {
+    border-radius: 25px;
+    width: 20rem;
+    height: 2.5rem;
+    font-size: 24px;
+    text-align: center;
 }
 
-.center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-#listContainer{
-  display: none;
-}
-.list{
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  min-width: 20%;
+#listContainer {
+    display: none;
 }
 
-li{
-  /*font-family: 'Bubbler One', sans-serif;*/
-  font-family: 'Comfortaa', cursive;
-  display: flex;
-  justify-content: flex-start;
-  margin: 2px;
-  font-size: 1.5rem;
-  /*text-decoration: line-through;*/
-  /*text-decoration-color: #000000;*/
+.list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 20%;
+}
+
+li {
+    /*font-family: 'Bubbler One', sans-serif;*/
+    font-family: 'Comfortaa', cursive;
+    display: flex;
+    justify-content: flex-start;
+    margin: 2px;
+    font-size: 1.5rem;
+    /*text-decoration: line-through;*/
+    /*text-decoration-color: #000000;*/
+}
+
+p {
+    margin: 1px;
 }
