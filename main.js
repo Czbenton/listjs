@@ -10,7 +10,8 @@ function submitText(event) {
         var newLi = document.createElement("li");
         var newId = Math.random();
         newLi.id = newId;
-        list.appendChild(newLi);
+        $(list.appendChild(newLi)).hide().fadeIn();
+
 
         newLi.onclick = function() {
             let x = document.getElementById(newId);
