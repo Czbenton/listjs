@@ -2,8 +2,6 @@
     document.querySelector('h1').textContent = "One List";
 })();
 
-
-
 function submitText(event) {
     if (event.which === 13) {
         var text = document.createTextNode(event.target.value);
@@ -20,15 +18,12 @@ function submitText(event) {
         newLi.appendChild(deleteButton);
         deleteButton.style.display = "none";
 
-
-
         addListItem(text, list, newLi, newId, ptag);
 
         var editButton = document.createElement('a');
         editButton.className = "fa fa-pencil"
         editButton.addEventListener("click", beginEditingItem);
         newLi.appendChild(editButton);
-
 
         addstrikeThroughFunc(newLi, ptagId, newId);
         document.getElementById('input').value = "";
@@ -60,7 +55,6 @@ function finishEditingItem(event) {
         currentTextP.textContent = newText;
         currentTextP.style.display = "inherit";
         itemContainer.removeChild(itemContainer.children[2]);
-
     }
 }
 
