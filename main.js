@@ -25,9 +25,10 @@ function submitText(event) {
         addListItem(text, list, newLi, newId, ptag);
 
         var editButton = document.createElement('a');
-        editButton.textContent = ".  edit ";
+        editButton.className = "fa fa-pencil"
         editButton.addEventListener("click", beginEditingItem);
         newLi.appendChild(editButton);
+
 
         addstrikeThroughFunc(newLi, ptagId, newId);
         document.getElementById('input').value = "";
@@ -35,32 +36,32 @@ function submitText(event) {
     }
 }
 
-function beginEditingItem(event){
-  var id = event.target.parentNode.id;
-  var itemContainer = document.getElementById(id);
-  var currentTextP = itemContainer.children[1];
-  currentTextP.style.display="none";
+function beginEditingItem(event) {
+    var id = event.target.parentNode.id;
+    var itemContainer = document.getElementById(id);
+    var currentTextP = itemContainer.children[1];
+    currentTextP.style.display = "none";
 
-  var defaultText = itemContainer.children[1].textContent;
+    var defaultText = itemContainer.children[1].textContent;
 
-  var editInputBox = document.createElement("input");
-  editInputBox.addEventListener("keyup", finishEditingItem);
-  editInputBox.type = "text";
-  editInputBox.value = defaultText;
-  itemContainer.insertBefore(editInputBox, itemContainer.children[2]);
+    var editInputBox = document.createElement("input");
+    editInputBox.addEventListener("keyup", finishEditingItem);
+    editInputBox.type = "text";
+    editInputBox.value = defaultText;
+    itemContainer.insertBefore(editInputBox, itemContainer.children[2]);
 }
 
-function finishEditingItem(event){
-  if(event.which === 13){
-    var newText= event.target.value;
-    var parentId = event.target.parentNode.id;
-    var itemContainer = document.getElementById(parentId);
-    var currentTextP = itemContainer.children[1];
-    currentTextP.textContent = newText;
-    currentTextP.style.display = "inherit";
-    itemContainer.removeChild(itemContainer.children[2]);
+function finishEditingItem(event) {
+    if (event.which === 13) {
+        var newText = event.target.value;
+        var parentId = event.target.parentNode.id;
+        var itemContainer = document.getElementById(parentId);
+        var currentTextP = itemContainer.children[1];
+        currentTextP.textContent = newText;
+        currentTextP.style.display = "inherit";
+        itemContainer.removeChild(itemContainer.children[2]);
 
-  }
+    }
 }
 
 function addListItem(text, list, newLi, newId, ptag) {
